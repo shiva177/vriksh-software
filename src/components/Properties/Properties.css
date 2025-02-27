@@ -1,0 +1,147 @@
+/* Properties Section */
+.properties-section {
+  padding: 6rem 2rem;
+  background-color: #f8f9fc;
+}
+
+.properties-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.properties-content {
+  max-width: 500px;
+}
+
+.properties-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.properties-description {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.read-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 2px solid #4f46e5;
+  color: #4f46e5;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: #4f46e5;
+  color: white;
+}
+
+/* Properties Grid */
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem; /* Adjust this value to match the spacing in your screenshot */
+  width: 600px;
+}
+
+
+/* Grid Items */
+.grid-item {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  width: 291.5px; /* Full width inside grid */
+  aspect-ratio: 1 / 1; /* Maintains square shape */
+}
+
+/* Grand Towers & Urban Square */
+.grid-item:nth-child(1), /* Grand Towers */
+.grid-item:nth-child(4) { /* Sky Heights */
+  height: 356.75px;
+  aspect-ratio: 4 / 5; /* Maintains correct proportions */
+}
+
+/* Green Valley Heights & Sky Heights */
+.grid-item:nth-child(3), /* Green Valley Heights */
+.grid-item:nth-child(2) { /* Urban Square */
+  height: 247.98px;
+  aspect-ratio: 3 / 4;
+}
+
+/* Image Styling */
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.grid-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Property Overlay */
+.property-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.grid-item:hover .property-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.property-overlay h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.property-overlay p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .properties-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .properties-grid {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .grid-item {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Ensures consistency */
+  }
+}
+

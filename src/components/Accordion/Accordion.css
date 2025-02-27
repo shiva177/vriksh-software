@@ -1,0 +1,102 @@
+/* Accordion Container */
+.accordion-container {
+  max-width: 1000px; /* Increased for better desktop fit */
+  width: 80%; /* Keeps it proportional */
+  margin: 0 auto;
+  padding: 50px 30px; /* More padding for spacious look */
+  font-family: "Arial", sans-serif;
+}
+
+/* Title */
+.accordion-title {
+  font-size: 28px; /* Increased for better readability */
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Accordion Wrapper */
+.accordion {
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+/* Accordion Item */
+.accordion-item {
+  border-bottom: 1px solid #ddd;
+  padding: 20px 25px; /* Bigger padding for better touch */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* Accordion Header */
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px; /* Increased for clarity */
+}
+
+/* Icon */
+.accordion-icon {
+  font-size: 22px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+/* Content (Hidden Initially) */
+.accordion-content {
+  padding: 12px 0;
+  font-size: 16px; /* Slightly larger */
+  color: #666;
+  transition: max-height 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {  /* Laptop screens */
+  .accordion-container {
+    max-width: 900px;
+    width: 85%;
+    padding: 40px 25px;
+  }
+
+  .accordion-title {
+    font-size: 26px;
+  }
+
+  .accordion-header {
+    font-size: 17px;
+  }
+
+  .accordion-content {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {  /* Tablets & smaller */
+  .accordion-container {
+    max-width: 95%;
+    padding: 30px 20px;
+  }
+
+  .accordion-title {
+    font-size: 22px;
+  }
+
+  .accordion-header {
+    font-size: 16px;
+  }
+
+  .accordion-icon {
+    font-size: 20px;
+  }
+
+  .accordion-content {
+    font-size: 14px;
+  }
+}
+

@@ -1,0 +1,21 @@
+.rating {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.google-logo {
+  width: 250px;
+  height: 86px;
+  vertical-align: middle;
+}
+
+.rating-score {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.rating p {
+  color: gray;
+  font-size: 14px;
+}
